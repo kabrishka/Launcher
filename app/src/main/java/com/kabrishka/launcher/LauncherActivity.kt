@@ -84,6 +84,7 @@ class LauncherActivity : AppCompatActivity() {
 
             val intent = Intent(Intent.ACTION_MAIN).apply {
                 setClassName(activityInfo.applicationInfo.packageName, activityInfo.name)
+                flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
             }
 
             val context = view.context
